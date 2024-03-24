@@ -17,7 +17,7 @@ use App\Livewire\LikePost;
 #LOS GET'S SOLO SON PARA MOSTRAR UN TEMPLADE
 
 #GET's sin variable
-Route::get('/home', HomeController::class)->name('home')->middleware('auth'); #Pagina principal
+Route::get('/', HomeController::class)->name('home')->middleware('auth'); #Pagina principal
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/Editar-Perfil', [PerfilController::class, 'index'])->name('perfil.index')->middleware('auth');
